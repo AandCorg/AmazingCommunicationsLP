@@ -26,7 +26,7 @@ jobs:
 
       - name: Build static site
         env:
-          NEXT_PUBLIC_BASE_PATH: /amazingcommunications-lp
+          NEXT_PUBLIC_BASE_PATH: /AmazingCommunicationsLP
         run: npm run build:pages
 
       - name: Deploy
