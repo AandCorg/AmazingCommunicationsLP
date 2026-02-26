@@ -1,7 +1,11 @@
 import type { NextConfig } from "next";
 
+const repoName = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 const nextConfig: NextConfig = {
-  /* config options here */
+  output: "export",
+  basePath: repoName,
+  assetPrefix: repoName,
 };
 
 export default nextConfig;
