@@ -21,6 +21,19 @@ GitHub Pages 向け（`.nojekyll` 作成込み）のビルド:
 npm run build:pages
 ```
 
+## フォルダ構成概要
+
+- `src/app`: App Router のページ/レイアウト
+- `src/data`: 静的データ
+- `src/theme.ts`: MUI テーマ設定
+- `public/`: 画像などの静的アセット
+- `.github/workflows/`: CI/CD（GitHub Actions）
+- `out/`: 静的エクスポート出力（Pages 配信対象）
+- `.next/`: Next.js のローカル生成物
+- `node_modules/`: 依存ライブラリ
+- `next.config.ts`: Next.js 設定
+- `package.json`: 依存関係と npm scripts
+
 ## Deploy Overview
 
 - `main` へ push
