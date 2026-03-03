@@ -47,6 +47,7 @@ export async function generateMetadata({
 export default async function ProductDetailPage({
   params,
 }: ProductDetailPageProps) {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
   const { slug } = await params;
   const product = getProductBySlug(slug);
 
@@ -58,7 +59,7 @@ export default async function ProductDetailPage({
     <Box sx={{ backgroundColor: product.theme.background, minHeight: "100vh", py: 6 }}>
       <Container maxWidth="lg">
         <Stack spacing={4}>
-          <Button href="/" sx={{ width: "fit-content", px: 0 }}>
+          <Button href={`${basePath}/`} sx={{ width: "fit-content", px: 0 }}>
             商品一覧へ戻る
           </Button>
 
@@ -96,7 +97,7 @@ export default async function ProductDetailPage({
               <Grid size={{ xs: 12, md: 5 }}>
                 <Card sx={{ position: "relative", height: 320, borderRadius: 2, overflow: "hidden" }}>
                   <Image
-                    src={product.images.keyVisual}
+                    src={`${basePath}${product.images.keyVisual}`}
                     alt={`${product.name} メインビジュアル`}
                     fill
                     sizes="(max-width: 900px) 100vw, 40vw"
@@ -149,7 +150,7 @@ export default async function ProductDetailPage({
 
                 <Card sx={{ position: "relative", height: 250, borderRadius: 3, overflow: "hidden" }}>
                   <Image
-                    src={product.images.gameFlow}
+                    src={`${basePath}${product.images.gameFlow}`}
                     alt={`${product.name} ゲームフロー資料`}
                     fill
                     sizes="(max-width: 900px) 100vw, 40vw"
@@ -159,7 +160,7 @@ export default async function ProductDetailPage({
 
                 <Card sx={{ position: "relative", height: 250, borderRadius: 3, overflow: "hidden" }}>
                   <Image
-                    src={product.images.packageDetail}
+                    src={`${basePath}${product.images.packageDetail}`}
                     alt={`${product.name} パッケージ裏面`}
                     fill
                     sizes="(max-width: 900px) 100vw, 40vw"
