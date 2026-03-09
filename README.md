@@ -52,3 +52,9 @@ npm run build:pages
 - ワークフロー定義: `.github/workflows/deploy.yml`
 - ビルドスクリプト: `package.json` (`build`, `build:pages`)
 - Pages 用パス設定: `.env.production`, `next.config.ts`
+
+## 運用ドキュメント
+
+更新手順や確認手順は以下に集約しています。
+
+- `docs/operations.md`

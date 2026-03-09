@@ -13,6 +13,8 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
+import ContactSection from "@/components/ContactSection";
+import SalesInfoPanel from "@/components/SalesInfoPanel";
 import { products } from "@/data/products";
 
 export default function HomePage() {
@@ -59,8 +61,7 @@ export default function HomePage() {
               </Box>
             </Typography>
             <Typography sx={{ maxWidth: 820, color: brandColors.textSub, fontSize: { xs: 16, md: 20 } }}>
-              ボードゲームを中心に、対話と気づきを生む体験設計を届けます。企業研修やチームビルディングにも使える
-              プロダクトを提供しています。
+              対話と気づきを生むamazingな体験を届けます。
             </Typography>
             <Button href="#products" variant="contained" size="large" sx={{ px: 4 }}>
               商品ラインアップを見る
@@ -128,6 +129,23 @@ export default function HomePage() {
             </Card>
           ))}
         </Stack>
+
+        <Box sx={{ mt: 4 }}>
+          <SalesInfoPanel
+            slug="brand"
+            basePath={basePath}
+            borderColor={brandColors.border}
+            titleColor={brandColors.textMain}
+            textColor={brandColors.textSub}
+          />
+        </Box>
+
+        <ContactSection
+          basePath={basePath}
+          borderColor={brandColors.border}
+          titleColor={brandColors.textMain}
+          textColor={brandColors.textSub}
+        />
       </Container>
     </Box>
   );

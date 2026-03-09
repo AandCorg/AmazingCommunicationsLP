@@ -13,12 +13,10 @@ export type Product = {
   age: string;
   players: string;
   playTime: string;
-  catchcopy: string[];
   theme: ProductTheme;
   images: {
     keyVisual: string;
-    packageDetail: string;
-    gameFlow: string;
+    sideVisual: string;
   };
   components: string[];
   flow: string[];
@@ -34,7 +32,6 @@ export const products: Product[] = [
     age: "12才以上",
     players: "3-5人",
     playTime: "約20-25分",
-    catchcopy: ["ダイスを振り", "資源を集め", "嘘を見抜け"],
     theme: {
       primary: "#1d6b52",
       secondary: "#c6a15b",
@@ -43,8 +40,7 @@ export const products: Product[] = [
     },
     images: {
       keyVisual: "/products/hattarishokai/box-front.png",
-      packageDetail: "/products/hattarishokai/box-back.png",
-      gameFlow: "/products/hattarishokai/game-flow.png",
+      sideVisual: "/products/hattarishokai/box-back.png",
     },
     components: [
       "資源カード x 47枚",

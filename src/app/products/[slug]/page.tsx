@@ -92,16 +92,6 @@ export default async function ProductDetailPage({
                   <Chip label={`プレイ人数: ${product.players}`} />
                   <Chip label={`プレイ時間: ${product.playTime}`} />
                 </Stack>
-                <Stack spacing={1}>
-                  {product.catchcopy.map((line) => (
-                    <Typography
-                      key={line}
-                      sx={{ color: brandColors.primary, fontWeight: 700, fontSize: { xs: "1.15rem", md: "1.4rem" } }}
-                    >
-                      {line}
-                    </Typography>
-                  ))}
-                </Stack>
               </Grid>
               <Grid size={{ xs: 12, md: 5 }}>
                 <Card
@@ -193,32 +183,14 @@ export default async function ProductDetailPage({
                   }}
                 >
                   <Image
-                    src={`${basePath}${product.images.gameFlow}`}
-                    alt={`${product.name} ゲームフロー図`}
-                    fill
-                    sizes="(max-width: 900px) 100vw, 40vw"
-                    style={{ objectFit: "cover" }}
-                  />
-                </Card>
-
-                <Card
-                  sx={{
-                    position: "relative",
-                    height: 250,
-                    borderRadius: 4,
-                    overflow: "hidden",
-                    border: `1px solid ${brandColors.border}`,
-                    boxShadow: "0 8px 30px rgba(20, 30, 60, 0.05)",
-                  }}
-                >
-                  <Image
-                    src={`${basePath}${product.images.packageDetail}`}
+                    src={`${basePath}${product.images.sideVisual}`}
                     alt={`${product.name} パッケージ詳細`}
                     fill
                     sizes="(max-width: 900px) 100vw, 40vw"
                     style={{ objectFit: "cover" }}
                   />
                 </Card>
+
               </Stack>
             </Grid>
           </Grid>
