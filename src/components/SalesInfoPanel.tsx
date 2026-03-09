@@ -111,7 +111,7 @@ export default function SalesInfoPanel({ basePath, borderColor, titleColor, text
       }}
     >
       <Typography variant="h6" sx={{ mb: 1.5, fontWeight: 700, color: titleColor }}>
-        販売・展開情報
+        最新情報
       </Typography>
 
       {entries === null && <CircularProgress size={20} />}

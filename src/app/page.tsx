@@ -71,7 +71,16 @@ export default function HomePage() {
 
         <Divider sx={{ my: 5 }} />
 
-        <Stack id="products" spacing={1} sx={{ mb: 3 }}>
+        <Box sx={{ mt: 4 }}>
+          <SalesInfoPanel
+            basePath={basePath}
+            borderColor={brandColors.border}
+            titleColor={brandColors.textMain}
+            textColor={brandColors.textSub}
+          />
+        </Box>
+
+        <Stack id="products" spacing={1} sx={{ mt: 4, mb: 3 }}>
           <Typography component="h2" sx={{ fontSize: { xs: 28, md: 38 }, fontWeight: 800, color: brandColors.textMain }}>
             Product lineup
           </Typography>
@@ -129,15 +138,6 @@ export default function HomePage() {
             </Card>
           ))}
         </Stack>
-
-        <Box sx={{ mt: 4 }}>
-          <SalesInfoPanel
-            basePath={basePath}
-            borderColor={brandColors.border}
-            titleColor={brandColors.textMain}
-            textColor={brandColors.textSub}
-          />
-        </Box>
 
         <ContactSection
           basePath={basePath}

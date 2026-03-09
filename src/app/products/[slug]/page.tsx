@@ -116,84 +116,64 @@ export default async function ProductDetailPage({
             </Grid>
           </Paper>
 
-          <Grid container spacing={3}>
-            <Grid size={{ xs: 12, md: 7 }}>
-              <Paper
-                sx={{
-                  p: 3,
-                  borderRadius: 4,
-                  backgroundColor: brandColors.cardBg,
-                  border: `1px solid ${brandColors.border}`,
-                }}
-              >
-                <Typography variant="h5" sx={{ mb: 2, fontWeight: 700, color: brandColors.textMain }}>
-                  商品説明
+          <Paper
+            sx={{
+              p: 3,
+              borderRadius: 4,
+              backgroundColor: brandColors.cardBg,
+              border: `1px solid ${brandColors.border}`,
+            }}
+          >
+            <Typography variant="h5" sx={{ mb: 2, fontWeight: 700, color: brandColors.textMain }}>
+              商品説明
+            </Typography>
+            <Stack spacing={1.5}>
+              {product.description.map((line, index) => (
+                <Typography key={`${product.slug}-desc-${index}`} sx={{ color: brandColors.textSub }}>
+                  {line}
                 </Typography>
-                <Stack spacing={1.5}>
-                  {product.description.map((line, index) => (
-                    <Typography key={`${product.slug}-desc-${index}`} sx={{ color: brandColors.textSub }}>
-                      {line}
-                    </Typography>
-                  ))}
-                </Stack>
-                <Divider sx={{ my: 3 }} />
-                <Typography variant="h6" sx={{ mb: 1.5, fontWeight: 700, color: brandColors.textMain }}>
-                  内容物
+              ))}
+            </Stack>
+
+            <Divider sx={{ my: 3 }} />
+
+            <Typography variant="h6" sx={{ mb: 1.5, fontWeight: 700, color: brandColors.textMain }}>
+              ストーリー
+            </Typography>
+            <Stack spacing={1.2}>
+              {product.story.map((line, index) => (
+                <Typography key={`${product.slug}-story-${index}`} sx={{ color: brandColors.textSub }}>
+                  {line}
                 </Typography>
-                <List dense>
-                  {product.components.map((item) => (
-                    <ListItem key={item} sx={{ py: 0.3, px: 0 }}>
-                      <ListItemText primary={`・${item}`} />
-                    </ListItem>
-                  ))}
-                </List>
-              </Paper>
-            </Grid>
+              ))}
+            </Stack>
 
-            <Grid size={{ xs: 12, md: 5 }}>
-              <Stack spacing={3}>
-                <Paper
-                  sx={{
-                    p: 2.5,
-                    borderRadius: 4,
-                    backgroundColor: brandColors.cardBg,
-                    border: `1px solid ${brandColors.border}`,
-                  }}
-                >
-                  <Typography variant="h6" sx={{ mb: 1.5, fontWeight: 700, color: brandColors.textMain }}>
-                    ゲームの流れ
-                  </Typography>
-                  <List dense>
-                    {product.flow.map((step, index) => (
-                      <ListItem key={`${product.slug}-step-${index}`} sx={{ py: 0.2, px: 0 }}>
-                        <ListItemText primary={`${index + 1}. ${step}`} />
-                      </ListItem>
-                    ))}
-                  </List>
-                </Paper>
+            <Divider sx={{ my: 3 }} />
 
-                <Card
-                  sx={{
-                    position: "relative",
-                    height: 250,
-                    borderRadius: 4,
-                    overflow: "hidden",
-                    border: `1px solid ${brandColors.border}`,
-                    boxShadow: "0 8px 30px rgba(20, 30, 60, 0.05)",
-                  }}
-                >
-                  <Image
-                    src={`${basePath}${product.images.sideVisual}`}
-                    alt={`${product.name} パッケージ詳細`}
-                    fill
-                    sizes="(max-width: 900px) 100vw, 40vw"
-                    style={{ objectFit: "cover" }}
-                  />
-                </Card>
+            <Typography variant="h6" sx={{ mb: 1.5, fontWeight: 700, color: brandColors.textMain }}>
+              ルール
+            </Typography>
+            <List dense>
+              {product.flow.map((step, index) => (
+                <ListItem key={`${product.slug}-step-${index}`} sx={{ py: 0.2, px: 0 }}>
+                  <ListItemText primary={step} primaryTypographyProps={{ sx: { whiteSpace: "pre-line" } }} />
+                </ListItem>
+              ))}
+            </List>
 
-              </Stack>
-            </Grid>
-          </Grid>
+            <Divider sx={{ my: 3 }} />
+
+            <Typography variant="h6" sx={{ mb: 1.5, fontWeight: 700, color: brandColors.textMain }}>
+              内容物
+            </Typography>
+            <List dense>
+              {product.components.map((item) => (
+                <ListItem key={item} sx={{ py: 0.3, px: 0 }}>
+                  <ListItemText primary={item} />
+                </ListItem>
+              ))}
+            </List>
+          </Paper>
         </Stack>
       </Container>
     </Box>
