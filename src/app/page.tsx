@@ -132,7 +132,6 @@ export default function HomePage() {
 
         <Box sx={{ mt: 4 }}>
           <SalesInfoPanel
-            slug="brand"
             basePath={basePath}
             borderColor={brandColors.border}
             titleColor={brandColors.textMain}

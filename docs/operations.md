@@ -8,9 +8,12 @@
 
 - `public/content/sales-info/brand.txt`
 
-商品個別の販売・展開情報を再度使う場合は、以下を編集します。
+記載形式:
 
-- `public/content/sales-info/<slug>.txt`
+- `日付|内容文|URL(任意)`
+- 例: `2026-03-09|「ハッタリ商会」をボードゲームマーケット出展|https://gamemarket.jp/access`
+- URLを省略した場合はリンクなしで表示されます。
+- 表示は日付の新しい順で最新5件のみです（6件目以降はファイルに残っていても非表示）。
 
 ## 2. 問い合わせフォーム（Googleフォーム）設定
 
