@@ -45,21 +45,23 @@ export default function HomePage() {
           }}
         >
           <Stack spacing={3} alignItems="center" textAlign="center">
-            <Typography
+            <Box
               component="h1"
               sx={{
-                fontSize: { xs: "2.3rem", md: "4rem" },
-                lineHeight: 1.1,
-                letterSpacing: "-0.02em",
-                color: brandColors.textMain,
-                fontWeight: 800,
+                m: 0,
+                width: "100%",
+                maxWidth: { xs: 360, sm: 520, md: 880 },
               }}
             >
-              Amazing{" "}
-              <Box component="span" sx={{ color: brandColors.primary }}>
-                communications
-              </Box>
-            </Typography>
+              <Image
+                src={`${basePath}/brand/AmazingCommunications_logo.png`}
+                alt="Amazing Communications logo"
+                width={1816}
+                height={478}
+                priority
+                style={{ width: "100%", height: "auto", display: "block" }}
+              />
+            </Box>
             <Typography sx={{ maxWidth: 820, color: brandColors.textSub, fontSize: { xs: 16, md: 20 } }}>
               対話と気づきを生むamazingな体験を届けます。
             </Typography>
