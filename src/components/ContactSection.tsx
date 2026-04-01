@@ -61,9 +61,6 @@ export default function ContactSection({ basePath, borderColor, titleColor, text
         <Typography component="h2" sx={{ fontSize: { xs: 26, md: 34 }, fontWeight: 800, color: titleColor }}>
           お問い合わせ
         </Typography>
-        <Typography sx={{ color: textColor }}>
-          無料で運用しやすい方法として、Google Workspaceと連携できるGoogleフォームを利用する構成にしています。
-        </Typography>
 
         {config === null && !hasError && <CircularProgress size={20} />}
 
@@ -90,4 +87,3 @@ export default function ContactSection({ basePath, borderColor, titleColor, text
     </Paper>
   );
 }
-
