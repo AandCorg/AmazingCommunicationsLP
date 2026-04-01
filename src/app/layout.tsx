@@ -4,6 +4,7 @@ import "./globals.css";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v16-appRouter";
 import { ThemeProvider } from "@mui/material/styles";
 import { Roboto } from "next/font/google";
+import SiteFooter from "@/components/SiteFooter";
 import theme from "../theme";
 
 const roboto = Roboto({
@@ -24,7 +25,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body>
         {/* App Router環境でMUIのスタイル順序を安定させるためのProvider */}
         <AppRouterCacheProvider>
-          <ThemeProvider theme={theme}>{children}</ThemeProvider>
+          <ThemeProvider theme={theme}>
+            <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
+              {children}
+              <SiteFooter />
+            </div>
+          </ThemeProvider>
         </AppRouterCacheProvider>
       </body>
     </html>
