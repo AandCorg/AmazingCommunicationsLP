@@ -72,8 +72,8 @@ export default function ContactSection({ basePath, borderColor, titleColor, text
               title="お問い合わせフォーム"
               src={config.googleFormEmbedUrl}
               width="100%"
-              height="900"
-              style={{ border: 0 }}
+              height="720"
+              style={{ border: 0, height: "min(720px, 70vh)" }}
             />
           </Box>
         )}
