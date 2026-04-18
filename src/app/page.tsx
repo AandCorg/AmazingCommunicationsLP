@@ -38,19 +38,19 @@ export default function HomePage() {
           sx={{
             mt: 1,
             px: { xs: 3, md: 7 },
-            py: { xs: 7, md: 10 },
+            py: { xs: 5, md: 7 },
             borderRadius: 6,
             border: `1px solid ${brandColors.border}`,
             background: `linear-gradient(180deg, ${brandColors.heroBg} 0%, #ffffff 100%)`,
           }}
         >
-          <Stack spacing={3} alignItems="center" textAlign="center">
+          <Stack spacing={{ xs: 2.5, md: 2 }} alignItems="center" textAlign="center">
             <Box
               component="h1"
               sx={{
                 m: 0,
                 width: "100%",
-                maxWidth: { xs: 360, sm: 520, md: 880 },
+                maxWidth: { xs: 320, sm: 460, md: 720 },
               }}
             >
               <Image
@@ -62,10 +62,10 @@ export default function HomePage() {
                 style={{ width: "100%", height: "auto", display: "block" }}
               />
             </Box>
-            <Typography sx={{ maxWidth: 820, color: brandColors.textSub, fontSize: { xs: 16, md: 20 } }}>
+            <Typography sx={{ mt: { xs: 0.5, md: 0 }, maxWidth: 820, color: brandColors.textSub, fontSize: { xs: 16, md: 20 } }}>
               対話と気づきを生むamazingな体験を届けます。
             </Typography>
-            <Button href="#products" variant="contained" size="large" sx={{ px: 4 }}>
+            <Button href="#products" variant="contained" size="large" sx={{ mt: { xs: 0.5, md: 0 }, px: 4 }}>
               商品ラインアップを見る
             </Button>
           </Stack>
