@@ -12,10 +12,9 @@ type ContactSectionProps = {
   basePath: string;
   borderColor: string;
   titleColor: string;
-  textColor: string;
 };
 
-export default function ContactSection({ basePath, borderColor, titleColor, textColor }: ContactSectionProps) {
+export default function ContactSection({ basePath, borderColor, titleColor }: ContactSectionProps) {
   const [config, setConfig] = useState<ContactConfig | null>(null);
   const [hasError, setHasError] = useState(false);
   const configPath = useMemo(() => `${basePath}/content/contact/config.json`, [basePath]);
