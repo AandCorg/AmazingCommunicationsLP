@@ -133,7 +133,7 @@ export default function GameMarketReservationSection({
       <Stack spacing={2.5}>
         <Stack spacing={0.8}>
           <Typography component="h2" sx={{ fontSize: { xs: 26, md: 34 }, fontWeight: 800, color: titleColor }}>
-            ゲームマーケット購入予約
+            ゲームマーケット2026春購入予約
           </Typography>
           <Typography sx={{ color: textColor, fontSize: { xs: 15, md: 16 }, lineHeight: 1.8 }}>
             当日のお取り置き希望を受け付けています。お名前、連絡先、ゲームの種類、個数、来場予定時間をご入力ください。
