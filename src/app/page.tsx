@@ -14,6 +14,7 @@ import {
   Typography,
 } from "@mui/material";
 import ContactSection from "@/components/ContactSection";
+import GameMarketReservationSection from "@/components/GameMarketReservationSection";
 import SalesInfoPanel from "@/components/SalesInfoPanel";
 import { products } from "@/data/products";
 
@@ -65,9 +66,14 @@ export default function HomePage() {
             <Typography sx={{ mt: { xs: 0.5, md: 0 }, maxWidth: 820, color: brandColors.textSub, fontSize: { xs: 16, md: 20 } }}>
               対話と気づきを生むamazingな体験を届けます。
             </Typography>
-            <Button href="#products" variant="contained" size="large" sx={{ mt: { xs: 0.5, md: 0 }, px: 4 }}>
-              商品ラインアップを見る
-            </Button>
+            <Stack direction={{ xs: "column", sm: "row" }} spacing={1.5} sx={{ mt: { xs: 0.5, md: 0 } }}>
+              <Button href="#game-market-reservation" variant="contained" size="large" sx={{ px: 4 }}>
+                購入予約する
+              </Button>
+              <Button href="#products" variant="outlined" size="large" sx={{ px: 4 }}>
+                商品ラインアップを見る
+              </Button>
+            </Stack>
           </Stack>
         </Paper>
 
@@ -81,6 +87,16 @@ export default function HomePage() {
             textColor={brandColors.textSub}
           />
         </Box>
+
+        <GameMarketReservationSection
+          basePath={basePath}
+          borderColor={brandColors.border}
+          primaryColor={brandColors.primary}
+          primaryDarkColor={brandColors.primaryDark}
+          titleColor={brandColors.textMain}
+          textColor={brandColors.textSub}
+          productNames={products.map((product) => product.name)}
+        />
 
         <Stack id="products" spacing={1} sx={{ mt: 4, mb: 3 }}>
           <Typography component="h2" sx={{ fontSize: { xs: 28, md: 38 }, fontWeight: 800, color: brandColors.textMain }}>

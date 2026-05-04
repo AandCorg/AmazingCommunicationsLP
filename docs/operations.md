@@ -26,13 +26,29 @@
 - `googleFormUrl`: 別タブで開くフォームURL
 - `googleFormEmbedUrl`: 埋め込みURL（`?embedded=true`）
 
-## 3. 画像差し替え
+## 3. ゲームマーケット購入予約フォーム（イベント期間限定）
+
+予約フォームは既存の問い合わせフォームとは別に、以下のJSONで管理しています。
+
+- `public/content/game-market-reservation/config.json`
+
+設定項目:
+
+- `eventName`: メール件名やフォーム見出しで使うイベント名
+- `mailTo`: LP内フォームからメール作成画面を開く送信先
+- `googleFormUrl`: Googleフォームを使う場合の別タブURL（任意）
+- `googleFormEmbedUrl`: Googleフォームを使う場合の埋め込みURL（任意、`?embedded=true`）
+
+Googleフォームの埋め込みURLを設定すると、LP内の入力フォームではなくGoogleフォームを表示します。
+ゲームマーケット終了後に削除する場合は、`src/app/page.tsx` の `GameMarketReservationSection` の import と呼び出し、`src/components/GameMarketReservationSection.tsx`、この設定フォルダを削除します。
+
+## 4. 画像差し替え
 
 商品画像は以下のフォルダに置き、`src/data/products.ts` のパスを更新します。
 
 - `public/products/<slug>/...`
 
-## 4. ブラウザ確認方法
+## 5. ブラウザ確認方法
 
 ### 推奨: 開発サーバーで確認
 
@@ -56,7 +72,7 @@ python -m http.server 8080 --directory out
 
 その後 `http://localhost:8080/` にアクセスします。
 
-## 5. 本番向けビルド
+## 6. 本番向けビルド
 
 ```powershell
 npm run build:pages
