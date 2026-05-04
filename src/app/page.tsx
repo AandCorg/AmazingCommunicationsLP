@@ -66,7 +66,7 @@ export default function HomePage() {
             <Typography sx={{ mt: { xs: 0.5, md: 0 }, maxWidth: 820, color: brandColors.textSub, fontSize: { xs: 16, md: 20 } }}>
               対話と気づきを生むamazingな体験を届けます。
             </Typography>
-            <Button href="#products" variant="outlined" size="large" sx={{ mt: { xs: 0.5, md: 0 }, px: 4 }}>
+            <Button href="#products" variant="contained" size="large" sx={{ mt: { xs: 0.5, md: 0 }, px: 4 }}>
               商品ラインアップを見る
             </Button>
           </Stack>
