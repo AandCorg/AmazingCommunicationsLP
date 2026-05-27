@@ -14,7 +14,6 @@ import {
   Typography,
 } from "@mui/material";
 import ContactSection from "@/components/ContactSection";
-import GameMarketReservationSection from "@/components/GameMarketReservationSection";
 import SalesInfoPanel from "@/components/SalesInfoPanel";
 import { products } from "@/data/products";
 
@@ -82,16 +81,6 @@ export default function HomePage() {
             textColor={brandColors.textSub}
           />
         </Box>
-
-        <GameMarketReservationSection
-          basePath={basePath}
-          borderColor={brandColors.border}
-          primaryColor={brandColors.primary}
-          primaryDarkColor={brandColors.primaryDark}
-          titleColor={brandColors.textMain}
-          textColor={brandColors.textSub}
-          productNames={products.map((product) => product.name)}
-        />
 
         <Stack id="products" spacing={1} sx={{ mt: 4, mb: 3 }}>
           <Typography component="h2" sx={{ fontSize: { xs: 28, md: 38 }, fontWeight: 800, color: brandColors.textMain }}>
